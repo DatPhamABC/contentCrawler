@@ -1,0 +1,90 @@
+absl-py==0.13.0
+astunparse==1.6.3
+atomicwrites==1.4.0
+attrs @ file:///tmp/build/80754af9/attrs_1620827162558/work
+Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
+bayesian-optimization==1.2.0
+bcrypt @ file:///C:/ci/bcrypt_1597918112552/work
+cachetools==4.2.2
+certifi==2021.5.30
+cffi @ file:///C:/ci/cffi_1625831764494/work
+cloudpickle==1.6.0
+colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+constantly==15.1.0
+cryptography @ file:///C:/ci/cryptography_1616769432139/work
+cssselect==1.1.0
+flatbuffers==1.12
+gast==0.4.0
+google-auth==1.34.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.34.1
+gym==0.18.3
+h2==4.0.0
+h5py==3.1.0
+hpack==4.0.0
+hyperframe==6.0.1
+hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
+idna @ file:///tmp/build/80754af9/idna_1622654382723/work
+importlib-metadata @ file:///C:/ci/importlib-metadata_1617877486026/work
+incremental==17.5.0
+iniconfig @ file:///home/linux1/recipes/ci/iniconfig_1610983019677/work
+itemadapter @ file:///tmp/build/80754af9/itemadapter_1626442940632/work
+itemloaders @ file:///tmp/build/80754af9/itemloaders_1606148664897/work
+jmespath @ file:///tmp/build/80754af9/jmespath_1594304593830/work
+kaggle==1.5.12
+keras-nightly==2.5.0.dev2021032900
+Keras-Preprocessing==1.1.2
+lxml @ file:///C:/ci/lxml_1616443391272/work
+Markdown==3.3.4
+more-itertools @ file:///tmp/build/80754af9/more-itertools_1622818384463/work
+oauthlib==3.1.1
+opt-einsum==3.3.0
+packaging @ file:///tmp/build/80754af9/packaging_1625611678980/work
+parsel @ file:///C:/ci/parsel_1613041790369/work
+Pillow==8.2.0
+pluggy @ file:///C:/ci/pluggy_1615976530170/work
+priority==1.3.0
+Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
+protobuf==3.17.3
+py @ file:///tmp/build/80754af9/py_1607971587848/work
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+PyDispatcher==2.0.5
+pyglet==1.5.15
+PyHamcrest @ file:///tmp/build/80754af9/pyhamcrest_1615748656804/work
+pymongo==3.12.0
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+pytest==6.2.4
+pytest-runner @ file:///tmp/build/80754af9/pytest-runner_1623663836848/work
+python-dateutil==2.8.2
+python-slugify==5.0.2
+pywin32==228
+queuelib==1.5.0
+regex==2021.8.28
+requests-oauthlib==1.3.0
+rsa==4.7.2
+Scrapy @ file:///D:/bld/scrapy_1618514699549/work
+scrapy-user-agents==0.1.1
+service-identity==18.1.0
+six @ file:///tmp/build/80754af9/six_1623709665295/work
+tensorboard==2.5.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.5.0
+tensorflow-estimator==2.5.0
+termcolor==1.1.0
+text-unidecode==1.3
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+Twisted @ file:///C:/ci/twisted_1614874458860/work
+twisted-iocpsupport @ file:///C:/ci/twisted-iocpsupport_1614804836190/work
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
+ua-parser==0.10.0
+user-agents==2.2.0
+w3lib==1.21.0
+wincertstore==0.2
+wrapt==1.12.1
+zipp @ file:///tmp/build/80754af9/zipp_1625570634446/work
+zope.interface @ file:///C:/ci/zope.interface_1625036257680/work
