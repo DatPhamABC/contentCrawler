@@ -63,3 +63,4 @@ Hướng dẫn cài đặt:
 
 ### 4.3. Ghi chú:
  - Dữ liệu được lưu trong MongoDB với hostname localhost và port 27017 với database: scrapedContent,  collection: content
+ - Cần chạy linkCrawler trước để lấy link cho contentCrawler
