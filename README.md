@@ -53,8 +53,11 @@ Hướng dẫn cài đặt:
  - output: nội dung các bài báo được lọc theo thời gian đăng
  - Các tham số:
     name = 'dtSpider': tên spider
+    
     start_urls = [] : list các trang cần lọc
+    
     date: thời gian đăng bài (đã format theo định dạng %Y/%m/%d từ date_extract)
+    
     content: lưu các nội dung của bài đăng (bao gồm tiêu đề (title), tóm tắt (summary), hình ảnh minh họa (image), nội dung bài đăng (article) đối với báo chữ)
                                            (bao gồm tiêu đề (title), tóm tắt (summary), nội dung bài đăng (article - gồm hình (image) và mô tả hình ảnh (image description) được lưu trong list items) đối với báo hình)
 
