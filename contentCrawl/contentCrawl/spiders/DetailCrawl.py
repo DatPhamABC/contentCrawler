@@ -8,25 +8,21 @@ class CrawlSpider(scrapy.Spider):
     name = 'dtSpider'
     custom_settings = {'FEED_EXPORT_ENCODING': 'utf-8'}
     start_urls = []
-    begin_date = datetime.date(2021, 1, 1)
-    end_date = datetime.date(2021, 12, 31)
 
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    db = myclient["scrapedLink"]
-    collection = db["link"]
-
-    for item in collection.find():
-        link = item['link']
-        start_urls.append(link)
-
-    def __init__(self):
+    def __init__(self, begin_date, end_date):
         super(CrawlSpider, self).__init__()
-        self.conn = pymongo.MongoClient(
-            'localhost',
-            27017
-        )
-        db = self.conn['scrapedContent']
+        self.myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        db = self.myclient['scrapedContent']
         self.collection = db['content']
+        self.begin_date = begin_date
+        self.end_date = end_date
+
+        db2 = self.myclient["scrapedLink"]
+        collection = db2["link"]
+
+        for item in collection.find():
+            link = item['link']
+            self.start_urls.append(link)
 
     def parse(self, response):
         # Get date from article
@@ -57,11 +53,23 @@ class CrawlSpider(scrapy.Spider):
                     }
                     items.append(item)
 
+                comments = []
+                for itm in response.css('div#box_comment div.comment_item'):
+                    commenter = itm.css('span.txt-name a.nickname::text').get()
+                    comment = itm.css('p.full_content::text').get()
+                    item = {
+                        'commenter': commenter,  # a set of 2 images NOT 1 image link
+                        'comment': comment
+                    }
+                    comments.append(item)
+
                 content = {
                     'title': title,
                     'summary': desc,
                     'article': items,
-                    'date': date.strftime("%Y/%m/%d")
+                    'date': date.strftime("%Y/%m/%d"),
+                    'URL': response.request.url,
+                    'comments': comments
                 }
                 self.collection.insert(dict(content))
 
@@ -72,11 +80,23 @@ class CrawlSpider(scrapy.Spider):
                 for p in response.css('article.fck_detail p.Normal ::text'):
                     article = article + p.get() + " "
 
+                comments = []
+                for itm in response.css('div#box_comment div.comment_item'):
+                    commenter = itm.css('span.txt-name a.nickname::text').get()
+                    comment = itm.css('p.full_content::text').get()
+                    item = {
+                        'commenter': commenter,  # a set of 2 images NOT 1 image link
+                        'comment': comment
+                    }
+                    comments.append(item)
+
                 content = {
                     'title': title,
                     'summary': desc,
                     'image': image,  # only 1 image link
                     'article': article,
-                    'date': date.strftime("%Y/%m/%d")
+                    'date': date.strftime("%Y/%m/%d"),
+                    'URL': response.request.url,
+                    'comments': comments
                 }
                 self.collection.insert(dict(content))
